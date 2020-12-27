@@ -43,7 +43,7 @@ body{
     margin: 0 20px;
 }
 
-/* 数据概览样式 */
+/* 1.数据概览样式 */
 .overview{
     height: 108px;
 }
@@ -67,54 +67,120 @@ body{
     font-size: 14px;
 }
 
-/* 设备监控样式 */
+/* 2.设备监控样式 */
 .monitor{
     height: 475px;
     margin: 20px 0;
 }
+/* 头部部分样式 */
+.monitor .head{
+    color: #1150c4;
+    font-size: 20px;
+    height: 60px;
+}
+.monitor .head .active{
+    color: #fff;
+}
+.monitor .head .sp{
+    color: #00f2f1;
+    font-size: 25px;
+    margin: 0 30px;
+}
+/* 标题部分样式 */
+.monitor .title{
+    display: flex;
+    height: 38px;
+    margin-left: -30px;
+    margin-right: -30px;
+    padding-left: 30px;
+    background-color: rgba(255, 255, 255, .1);
+    align-items: center;
+}
+.monitor .title span{
+    color: #68d8fe;
+    font-size: 14px;
+}
+.monitor .title span:nth-child(1),
+.monitor .title span:nth-child(3){
+    flex: 1;
+}
+.monitor .title span:nth-child(2){
+    flex: 2;
+}
+/* 内容部分样式 */
+.monitor .content{
+    height: 343px;
+    color: #4396d8;
+    overflow: hidden;
+    display: none;
+    margin-left: -30px;
+    margin-right: -30px;
+}
+.monitor .content.active{
+    display: block;
+}
+.monitor .content li{
+    display: flex;
+    height: 34px;
+    padding-left: 30px;
+    align-items: center;
+}
+.monitor .content li:hover{
+    background-color: rgba(106, 204, 163, .5);
+}
+.monitor .content span:nth-child(1),
+.monitor .content span:nth-child(3){
+    flex: 1;
+}
+.monitor .content span:nth-child(2){
+    flex: 2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
 
-/* 点位分布统计样式 */
+/* 3.点位分布统计样式 */
 .point{
     height: 330px;
 }
 
-/* 设备数据统计(地图)样式 */
+/* 4.设备数据统计(地图)样式 */
 .map{
     height: 603px;
     margin: 0 13px;
     background-color: rgba(255, 255, 255, .1);
 }
 
-/* 全国用户总量统计样式 */
+/* 5.全国用户总量统计样式 */
 .userTotal{
     height: 330px;
     margin: 20px;
 }
 
-/* 订单销售额概览样式 */
+/* 6.订单销售额概览样式 */
 .order{
     height: 144px;
 }
 
-/* 销售额统计样式 */
+/* 7.销售额统计样式 */
 .sale{
     height: 245px;
     margin: 20px 0;
 }
 
-/* 渠道分布和一季度销售进度样式 */
+/* 8.渠道分布和一季度销售进度样式 */
 .twoInOne{
     height: 229px;
     margin-bottom: 20px;
 }
-/* 渠道分布样式 */
+/* 8.1渠道分布样式 */
 .channel{
     float: left;
     width: 48%;
     height: 100%;
 }
 
-/* 一季度销售进度样式 */
+/* 8.2一季度销售进度样式 */
 .quarter{
     float: left;
     margin-left: 20px;
@@ -122,7 +188,7 @@ body{
     height: 100%;
 }
 
-/* 全国热榜 各省热销样式 */
+/* 9.全国热榜 各省热销样式 */
 .hot{
     height: 275px;
 }
