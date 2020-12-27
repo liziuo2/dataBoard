@@ -47,6 +47,25 @@ body{
 .overview{
     height: 108px;
 }
+.overview .inner{
+    display: flex;
+}
+.overview .item{
+    flex: 1;
+    text-align: center;
+}
+.overview .item h3{
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 18px;
+}
+.overview .item i{
+    font-size: 14px;
+}
+.overview .item span{
+    color: #4c9bfd;
+    font-size: 14px;
+}
 
 /* 设备监控样式 */
 .monitor{
