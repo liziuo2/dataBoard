@@ -162,6 +162,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    background: url('../images/rect.png') no-repeat;
 }
 .point .echarts .data .item{
     width: 50%;
@@ -181,6 +182,33 @@ body{
 .userTotal{
     height: 330px;
     margin: 20px;
+}
+.userTotal h3{
+    font-size: 20px;
+    height: 42px;
+    color: #fff;
+}
+.userTotal .echarts {
+    display: flex;
+    height: 240px;
+}
+.userTotal .echarts .bar{
+    flex:3;
+    background-color: rgba(255, 255, 255, .1);
+}
+.userTotal .echarts .data{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: url('../images/rect.png') no-repeat;
+}
+.userTotal .echarts .data .item{
+    width: 50%;
+}
+.userTotal .echarts .data span{
+    color: #4c9bfd;
 }
 
 /* 6.订单销售额概览样式 */
