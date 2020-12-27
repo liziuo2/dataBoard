@@ -1,0 +1,109 @@
+body{
+    background: url('../images/bg.jpg') no-repeat 0 0 / cover;
+}
+
+/* 边框图片样式 */
+.panel{
+    position: relative;
+    border: 1px solid #ccc;
+    /* 边框的宽 */
+    border-width: 50px 39px 21px 130px;
+    border-image: url('../images/border.png') 50 39 21 130 stretch ;
+    box-sizing: border-box;
+}
+.inner{
+    position: absolute;
+    top: -50px;
+    right: -39px;
+    bottom: -21px;
+    left: -130px;
+    padding: 20px 30px;
+}
+
+/* 版心样式 */
+.container{
+    display: flex;
+    background: url('../images/logo.png') no-repeat 0 0 / contain;
+    min-height: 700px;
+    min-width: 1080px;
+    max-width: 1920px;
+    padding: 120px 20px 0 20px;
+    margin: 0 auto;
+}
+
+/* 第一列和第三列样式 */
+.column:nth-child(1),
+.column:nth-child(3){
+    flex: 3;
+}
+
+/* 第二列样式 */
+.column:nth-child(2){
+    flex: 4;
+    margin: 0 20px;
+}
+
+/* 数据概览样式 */
+.overview{
+    height: 108px;
+}
+
+/* 设备监控样式 */
+.monitor{
+    height: 475px;
+    margin: 20px 0;
+}
+
+/* 点位分布统计样式 */
+.point{
+    height: 330px;
+}
+
+/* 设备数据统计(地图)样式 */
+.map{
+    height: 603px;
+    margin: 0 13px;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+/* 全国用户总量统计样式 */
+.userTotal{
+    height: 330px;
+    margin: 20px;
+}
+
+/* 订单销售额概览样式 */
+.order{
+    height: 144px;
+}
+
+/* 销售额统计样式 */
+.sale{
+    height: 245px;
+    margin: 20px 0;
+}
+
+/* 渠道分布和一季度销售进度样式 */
+.twoInOne{
+    height: 229px;
+    margin-bottom: 20px;
+}
+/* 渠道分布样式 */
+.channel{
+    float: left;
+    width: 48%;
+    height: 100%;
+}
+
+/* 一季度销售进度样式 */
+.quarter{
+    float: left;
+    margin-left: 20px;
+    width: 48%;
+    height: 100%;
+}
+
+/* 全国热榜 各省热销样式 */
+.hot{
+    height: 275px;
+}
