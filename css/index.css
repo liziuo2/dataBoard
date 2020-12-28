@@ -74,9 +74,11 @@ body{
 }
 /* 头部部分样式 */
 .monitor .head{
-    color: #1150c4;
     font-size: 20px;
     height: 60px;
+}
+.monitor .head a{
+    color: #1150c4;
 }
 .monitor .head .active{
     color: #fff;
