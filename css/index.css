@@ -139,24 +139,20 @@ body{
     text-overflow: ellipsis;
 }
 
-/* 3.点位分布统计样式 */
-.point{
+/* 3.点位分布统计和全国用户总量统计共用样式 */
+.share{
     height: 330px;
 }
-.point h3{
+.share h3{
     font-size: 20px;
     height: 42px;
     color: #fff;
 }
-.point .echarts {
+.share .echarts {
     display: flex;
     height: 240px;
 }
-.point .echarts .pie{
-    flex:2;
-    background-color: rgba(255, 255, 255, .1);
-}
-.point .echarts .data{
+.share .echarts .data{
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -164,54 +160,36 @@ body{
     align-items: center;
     background: url('../images/rect.png') no-repeat;
 }
-.point .echarts .data .item{
+.share .echarts .data .item{
     width: 50%;
 }
-.point .echarts .data span{
+.share .echarts .data span{
     color: #4c9bfd;
 }
 
-/* 4.设备数据统计(地图)样式 */
+/* 4. 点位分布统计样式*/
+.point .echarts .pie{
+    flex:2;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+/*5.设备数据统计(地图)样式 */
 .map{
     height: 603px;
     margin: 0 13px;
     background-color: rgba(255, 255, 255, .1);
 }
 
-/* 5.全国用户总量统计样式 */
+/* 6.全国用户总量统计样式 */
 .userTotal{
-    height: 330px;
     margin: 20px;
-}
-.userTotal h3{
-    font-size: 20px;
-    height: 42px;
-    color: #fff;
-}
-.userTotal .echarts {
-    display: flex;
-    height: 240px;
 }
 .userTotal .echarts .bar{
     flex:3;
     background-color: rgba(255, 255, 255, .1);
 }
-.userTotal .echarts .data{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    background: url('../images/rect.png') no-repeat;
-}
-.userTotal .echarts .data .item{
-    width: 50%;
-}
-.userTotal .echarts .data span{
-    color: #4c9bfd;
-}
 
-/* 6.订单销售额概览样式 */
+/* 7.订单销售额概览样式 */
 .order{
     height: 144px;
 }
@@ -254,31 +232,31 @@ body{
     font-size: 14px;
 }
 
-/* 7.销售额统计样式 */
+/* 8.销售额统计样式 */
 .sale{
     height: 245px;
     margin: 20px 0;
 }
 
-/* 8.渠道分布和一季度销售进度样式 */
+/* 9.渠道分布和一季度销售进度样式 */
 .twoInOne{
     display: flex;
     margin-bottom: 20px;
 }
-/* 8.1渠道分布样式 */
+/* 9.1渠道分布样式 */
 .channel{
     height: 230px;
     width: 48%;
 }
 
-/* 8.2一季度销售进度样式 */
+/* 9.2一季度销售进度样式 */
 .quarter{
     margin-left: 20px;
     width: 48%;
     height: 230px;
 }
 
-/* 9.全国热榜 各省热销样式 */
+/* 10.全国热榜 各省热销样式 */
 .hot{
     height: 275px;
 }
