@@ -1,3 +1,4 @@
+
 // 饼状图
 $(function () {
     // 基于准备好的dom，初始化echarts实例
@@ -42,3 +43,4 @@ $(function () {
     };
     myChart.setOption(option);
 })
+
