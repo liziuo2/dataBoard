@@ -56,7 +56,7 @@ body{
 }
 .overview .item h3{
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 18px;
 }
 .overview .item i{
@@ -144,7 +144,7 @@ body{
     height: 330px;
 }
 .share h3{
-    font-size: 20px;
+    font-size: 22px;
     height: 42px;
     color: #fff;
 }
@@ -241,7 +241,7 @@ body{
     display: inline-block;
     height: 24px;
     color: #fff;
-    font-size: 20px;
+    font-size: 22px;
     margin-right: 20px;
 }
 .sale .title span{
@@ -326,4 +326,80 @@ body{
 /* 10.全国热榜 各省热销样式 */
 .hot{
     height: 275px;
+}
+.hot .title{
+    height: 24px;
+    line-height: 24px;
+}
+.hot .title h3{
+    float: left;
+    font-size: 22px;
+    color: #fff;
+    margin-right: 20px;
+}
+.hot .title i{
+    float: right;
+    color:#057faf;
+    font-size: 16px;
+    font-weight: 700;
+    margin-right: 20px;
+}
+.hot .data{
+    display: flex;
+    height: 190px;
+    color: #4c9bfd;
+    margin-top: 20px;
+}
+.hot .left,
+.hot .middle,
+.hot .right
+{
+    flex: 1;
+}
+.hot .left,
+.hot .middle,
+.hot .right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.hot .left .item{
+    flex:1;
+    font-size: 16px;
+}
+.hot .left .item i{
+    display: inline-block;
+    font-size: 30px;
+    text-align: center;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+.hot .middle ul{
+    height: 100%;
+    margin-top: -10px;
+}
+.hot .middle li{
+    height: 40px;
+    line-height: 40px;
+}
+.hot .middle li.active{
+    color: #a3c6f2;
+    background-color: rgba(255, 255, 255, .1);
+}
+.hot .icon-up{
+    color: #dc3c33;
+}
+.hot .icon-down{
+    color: #36be90;
+}
+.hot .right{
+    height: 100%;
+    margin-top: -10px;
+    align-items: center;
+    color: #3ab6c3;
+    background-color: rgba(255, 255, 255, .1);
+}
+.hot .right li{
+    height: 33px;
+    line-height: 33px;
 }
