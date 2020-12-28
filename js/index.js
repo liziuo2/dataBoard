@@ -1,3 +1,31 @@
+$(function () {
+    // 1.设置设备监控点击事件
+    $('.monitor .head a').on('click', function () {
+        /* 
+        $(this).addClass('active').siblings('a').removeClass('active')
+        let index = $(this).index('.monitor .head a') 
+        */
+
+        // 改为链式编程
+        let index = $(this).addClass('active').siblings('a').removeClass('active').end().index('.monitor .head a')
+
+        $('.monitor .content').eq(index).show().siblings('.monitor .content').hide()
+    })
+
+    // 2.设置轮播图动画
+    // 封装轮播图动画
+    let time = 7000
+    function loop() {
+        $('.monitor .content ul').animate({
+            top: -$('.monitor .content li').height() * 15
+        }, time, 'linear', function () {
+            $(this).css('top', 0)
+        })
+    }
+    loop()
+    // 设置定时器
+    setInterval(loop, time)
+})
 
 // 饼状图
 $(function () {
