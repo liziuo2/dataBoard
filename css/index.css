@@ -352,18 +352,13 @@ body{
     color: #4c9bfd;
     margin-top: 20px;
 }
-.hot .left,
-.hot .middle,
-.hot .right
-{
-    flex: 1;
-}
+
 .hot .left,
 .hot .middle,
 .hot .right{
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 .hot .left .item{
     flex:1;
@@ -381,8 +376,8 @@ body{
     margin-top: -10px;
 }
 .hot .middle li{
-    height: 40px;
-    line-height: 40px;
+    height: 37px;
+    line-height: 37px;
 }
 .hot .middle li.active{
     color: #a3c6f2;
@@ -395,13 +390,13 @@ body{
     color: #36be90;
 }
 .hot .right{
-    height: 100%;
-    margin-top: -10px;
+    height: 186px;
     align-items: center;
+    margin-top: -10px;
     color: #3ab6c3;
     background-color: rgba(255, 255, 255, .1);
 }
 .hot .right li{
-    height: 33px;
-    line-height: 33px;
+    height: 32px;
+    line-height: 32px;
 }
