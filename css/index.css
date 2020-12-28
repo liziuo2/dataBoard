@@ -215,6 +215,44 @@ body{
 .order{
     height: 144px;
 }
+.order .title{
+    display: flex;
+    height: 20px;
+    align-items: center;
+}
+.order .title a{
+    font-size: 14px;
+    color: #1950c4;
+}
+.order .title a.active{
+    color: #fff;
+    font-size: 20px;
+}
+.order .title .sp{
+    font-size: 18px;
+    color: #00f2f1;
+    margin: 0 30px;
+}
+.order .data{
+    display: flex;
+    height: 64px;
+    margin-top: 25px;
+}
+.order .data .item{
+    flex: 1;
+}
+.order .data h3{
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.order .data i{
+    font-size: 14px;
+}
+.order .data span{
+    color: #4c9bfd;
+    font-size: 14px;
+}
 
 /* 7.销售额统计样式 */
 .sale{
