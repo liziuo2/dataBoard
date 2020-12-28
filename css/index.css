@@ -237,6 +237,37 @@ body{
     height: 245px;
     margin: 20px 0;
 }
+.sale .title h3{
+    display: inline-block;
+    height: 24px;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+}
+.sale .title span{
+    color: #00f2f1;
+    font-size: 22px;
+}
+.sale .title a{
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    border-radius: 4px;
+    color: #0bace6;
+    font-size: 14px;
+    margin-left: 20px;
+}
+.sale .title a.active{
+    color: #fff;
+    background-color:#4c9bfd;
+}
+.sale .line{
+    height: 162px;
+    margin-top: 10px;
+    background-color: rgba(255, 255, 255, .1);
+}
 
 /* 9.渠道分布和一季度销售进度样式 */
 .twoInOne{
