@@ -25,6 +25,27 @@ $(function () {
     loop()
     // 设置定时器
     setInterval(loop, time)
+
+    //3.设置订单销售额概览动画
+    // 订单销售额概览数据
+    let orderData = [
+        { orders: "301,987", amount: "99834" }, //0
+        { orders: "20,301", amount: "8617" }, //1
+        { orders: "1,987", amount: "3834" }, //2
+        { orders: "987", amount: "851" }, //3
+    ];
+    // 下标
+    let orderIndex = 0
+    // 定时器
+    setInterval(function () {
+        orderIndex++
+        if (orderIndex == $('.order .title a').length) {
+            orderIndex = 0
+        }
+        $('.order .title a').eq(orderIndex).addClass('active').siblings('a').removeClass('active')
+        $('.order .data h3').eq(0).text(orderData[orderIndex].orders)
+        $('.order .data h3').eq(1).text(orderData[orderIndex].amount)
+    }, 1500)
 })
 
 // 饼状图
