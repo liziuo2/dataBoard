@@ -279,12 +279,48 @@ body{
     height: 230px;
     width: 48%;
 }
+.channel h3{
+    font-size: 22px;
+    color: #fff;
+}
+.channel h3 b{
+    font-size: 14px;
+}
+.channel .item{
+    float: left;
+    width: 50%;
+    color:#4c9bfd;
+    margin-top: 25px;
+}
 
 /* 9.2一季度销售进度样式 */
 .quarter{
     margin-left: 20px;
     width: 48%;
     height: 230px;
+}
+.quarter h3{
+    font-size: 18px;
+    height: 20px;
+    color:#fff;
+}
+.quarter .ring{
+    height: 90px;
+    background-color: rgba(255, 255, 255, .1);
+    margin: 20px 0;
+}
+.quarter .data .item{
+    float: left;
+    width: 50%;
+    color: #2d9bfd;
+    font-size: 14px;
+}
+.quarter .data .item p{
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 5px;
+
 }
 
 /* 10.全国热榜 各省热销样式 */
