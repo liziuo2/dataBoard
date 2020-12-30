@@ -48,7 +48,7 @@ $(function () {
         $('.order .data h3').eq(1).text(orderData[orderIndex].amount)
     }, 1500)
 
-    // 4.设置销售额统计动画
+    /* // 4.设置销售额统计动画
     // 4.1 下标
     let saleIndex = 0
     // 4.2 .定时器动画
@@ -58,7 +58,7 @@ $(function () {
             saleIndex = 0
         }
         $('.sale .title a').eq(saleIndex).addClass('active').siblings('a').removeClass('active')
-    }, 1500)
+    }, 1500) */
 
     // 5.设置全国热榜各省热销动画
     // 5.1 各省热销数据
@@ -139,3 +139,221 @@ $(function () {
     myChart.setOption(option);
 })
 
+// 柱状图
+$(function () {
+    let myChart = echarts.init($('.userTotal .bar')[0])
+    let item = {
+        value: 1000,
+        itemStyle: {
+            color: '#254065',
+            opacity: .6
+        }
+    }
+    option = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+                type: 'none'        // 默认为直线，可选为：'line' | 'shadow' | 'none'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            height: 210,
+            containLabel: true
+        },
+        xAxis: [
+            {
+                type: 'category',
+                data: ['上海', '广州', '北京', '深圳', '合肥', '', '......', '', '杭州', '厦门', '济南', '成都', '重庆'],
+                axisTick: {
+                    show: false
+                },
+                axisLine: {
+                    lineStyle: {
+                        color: '#034f5f'
+                    }
+                },
+                axisLabel: {
+                    color: '#478fe9'
+                }
+            }
+        ],
+        yAxis: [
+            {
+                type: 'value',
+                axisLine: {
+                    lineStyle: {
+                        color: '#034f5f'
+                    }
+                },
+                splitLine: {
+                    lineStyle: {
+                        color: '#034f5f'
+                    }
+                },
+                axisLabel: {
+                    color: '#478fe9'
+                }
+            }, {
+                axisLine: {
+                    lineStyle: {
+                        color: '#034f5f'
+                    }
+                }
+            }
+        ],
+        series: [
+            {
+                name: '全国用户总量统计',
+                type: 'bar',
+                barWidth: '60%',
+                itemStyle: {
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1,
+                        [
+                            { offset: 0, color: '#00f8f9' },
+                            { offset: 1, color: '#0069d0' }
+                        ]
+                    )
+                },
+                data: [2100, 1900, 1700, 1560, 1400, item, item, item, 900, 750, 600, 480, 240],
+            }
+        ]
+    };
+    myChart.setOption(option)
+})
+
+// 曲线图
+$(function () {
+    let myChart = echarts.init($('.sale .line')[0])
+    let option = {
+        title: {
+            text: '单位 万',
+            textStyle: {
+                color: "#468fea",
+                fontSize: 12
+            }
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'none'
+            }
+        },
+        legend: {
+            data: ['最高额度', '最低额度'],
+            right: '10%',
+            textStyle: {
+                color: '#4b99fa'
+            }
+        },
+        grid: {
+            height: 110,
+            left: '7%',
+            right: '3%',
+            top: '20%'
+        },
+        xAxis: {
+            type: 'category',
+            boundaryGap: false,
+            data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+            axisLine: {
+                lineStyle: {
+                    color: '#012b48'
+                }
+            },
+            axisTick: {
+                show: false
+            },
+            axisLabel: {
+                textStyle: {
+                    color: '#3d7dce'
+                }
+            },
+        },
+        yAxis: {
+            type: 'value',
+            axisLine: {
+                lineStyle: {
+                    color: '#012b48'
+                }
+            },
+            axisTick: {
+                show: false
+            },
+            axisLabel: {
+                textStyle: {
+                    color: '#3d7dce'
+                }
+            },
+            splitLine: {
+                lineStyle: {
+                    color: '#012b48'
+                }
+            }
+        },
+        series: [
+            {
+                name: '最高额度',
+                type: 'line',
+                data: [24, 440, 101, 134, 90, 230, 210, 230, 120, 230, 210, 120],
+                smooth: true,
+                symbolSize: 10,
+                color: '#00f2f1',
+                lineStyle: {
+                    color: '#00f2f1'
+                }
+            },
+            {
+                name: '最低额度',
+                type: 'line',
+                data: [40, 64, 191, 324, 290, 330, 310, 213, 180, 200, 180, 79],
+                smooth: true,
+                symbolSize: 10,
+                color: '#c43938',
+                lineStyle: {
+                    color: '#c43938'
+                }
+            },
+        ]
+    };
+    myChart.setOption(option)
+
+    let data = [
+        [
+            [24, 440, 101, 134, 90, 230, 210, 230, 120, 230, 210, 120],
+            [40, 64, 191, 324, 290, 330, 310, 213, 180, 200, 180, 79]
+        ],
+        [
+            [123, 175, 112, 197, 221, 457, 98, 261, 43, 64, 76, 38],
+            [43, 31, 65, 23, 78, 21, 82, 64, 43, 60, 19, 34]
+        ],
+        [
+            [34, 87, 32, 176, 98, 12, 32, 87, 39, 36, 29, 36],
+            [56, 43, 398, 21, 56, 387, 43, 12, 443, 54, 12, 98]
+        ],
+        [
+            [43, 73, 62, 354, 91, 54, 284, 43, 486, 43, 54, 53],
+            [32, 54, 34, 87, 132, 45, 62, 268, 93, 54, 54, 24]
+        ]
+    ];
+
+    // 4.设置销售额统计动画
+    // 4.1 下标
+    let saleIndex = 0
+    // 4.2 .定时器动画
+    setInterval(function () {
+        saleIndex++
+        if (saleIndex == $('.sale .title a').length) {
+            saleIndex = 0
+        }
+        $('.sale .title a').eq(saleIndex).addClass('active').siblings('a').removeClass('active')
+
+        // 替换数据
+        option.series[0].data = data[saleIndex][0]
+        option.series[1].data = data[saleIndex][1]
+        myChart.setOption(option)
+    }, 1500)
+})
