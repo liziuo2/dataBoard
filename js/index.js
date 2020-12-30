@@ -357,3 +357,80 @@ $(function () {
         myChart.setOption(option)
     }, 1500)
 })
+
+// 环形图
+$(function () {
+    let myChart = echarts.init($('.quarter .ring')[0])
+    let option = {
+        title: {
+            text: '75%',
+            left: '40%',
+            top: '45%',
+            textStyle: {
+                color: '#fff',
+                fontSize: 16
+            }
+        },
+        legend: {
+            orient: 'vertical',
+            left: 10
+        },
+        series: [
+            {
+                width: 200,
+                height: 130,
+                startAngle: 180,
+                type: 'pie',
+                radius: ['50%', '70%'],
+                avoidLabelOverlap: false,
+                label: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    label: {
+                        show: true,
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                },
+                labelLine: {
+                    show: false
+                },
+                data: [
+                    {
+                        value: 35,
+                        itemStyle: {
+                            color: new echarts.graphic.LinearGradient(
+                                0, 0, 0, 1,// 表示渐变的方向，0001:从左到右,0010:从上到下
+                                [{
+                                    offset: 0,
+                                    color: '#0063c2'
+                                },
+                                {
+                                    offset: 1,
+                                    color: '#00c3de'
+                                }
+                                ])
+                        }
+                    },
+                    {
+                        value: 15,
+                        itemStyle: {
+                            color: '#d0274d'
+                        }
+                    },
+                    {
+                        value: 50, itemStyle: {
+                            color: 'transparent'
+                        }
+                    },
+                ]
+            }
+        ]
+    };
+    myChart.setOption(option)
+})
+
+// 迁徙图
+
